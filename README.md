@@ -1,2 +1,2 @@
 # node-oauth-server-demo
-oauth study demo
+oauth study server demo
