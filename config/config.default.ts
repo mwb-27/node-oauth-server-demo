@@ -15,9 +15,15 @@ export default (appInfo: EggAppInfo) => {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,
   };
 
+  config.oAuth2Server = {
+    debug: appInfo.env === 'local',
+    grants: [ 'password' ],
+  };
+
   // the return config will combines to EggAppConfig
   return {
     ...config,
     ...bizConfig,
   };
 };
+
